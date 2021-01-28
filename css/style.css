@@ -1,0 +1,133 @@
+
+ /* Fonts */
+ @import url(./fonts.css);
+ @import url(./partials/_variables.css);
+ @import url(./partials/_global.css);
+
+ /* Start Navbar */
+ .header .main-menu .navbar{
+     padding: 1rem 7rem;
+ }
+ .header .main-menu .nav-item .nav-link{
+     font-family: var(--ubuntu);
+     text-transform: uppercase;
+     font-weight: 500;
+     padding:1.5rem;
+     color: var(--title-color)
+ }
+
+ .header .main-menu .navbar-nav .active a{
+     background: var(--gradient-color);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+
+ .header .main-menu .navbar-nav a:hover{
+     background: var(--gradient-color);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+ /* End Navbar */
+
+ /* Banner */
+ .site-banner{
+     margin-bottom:12%;
+ }
+
+ .site-main .site-banner .site-title h3{
+     padding-top: 20%;
+     font-weight: 500;
+ }
+
+ .site-main .site-banner .site-title h3::after{
+     content:"";
+     height:2px;
+     width:18vw;
+     background: lightseagreen;
+     display: inline-block;
+     margin-left: 5%;
+     transform: translateY(-20px);
+ }
+
+ .site-main .site-banner .site-title h4::after{
+     content:"";
+     height:2px;
+     width:28vw;
+     background: lightseagreen;
+     display: inline-block;
+     transform: translateY(-5px);
+ }
+
+ .site-banner h4{
+     font-size: xx-large;
+ }
+ /* End Banner */
+
+ /* About */
+ .about-image{
+     width:60%;
+     border-radius: 50%;
+     margin-left:12rem;
+ }
+ .site-main .about{
+     padding: 8rem 5rem;
+ }
+ .site-main .about .about-title h2 > span{
+     display: block;
+     font: normal bold 49px/60px var(--ubuntu);
+     letter-spacing: 30px;
+ }
+
+ .site-main .about .about-title .paragraph > p{
+     padding: .4rem 0;
+ }
+ .about{
+     margin-bottom:12%;
+ }
+ /* End About */
+
+ /* Skills */
+
+ .site-main .skills{
+     padding: 1em 20rem;
+     margin-bottom:4rem;
+ }
+
+ .site-main .skills .first-row .col-lg-4{
+     display: flex;
+     justify-content: center;
+ }
+
+ .site-main .skills .first-row .col-lg-4 > .single-skill{
+     border: 1px solid var(--border-color);
+     text-align: center;
+     padding: 1.8rem 0rem;
+     margin: .9rem 0rem;
+     width:180px;
+     height:100px;
+     cursor:pointer;
+     transition: transform .4es ease;
+ }
+ .site-main .skills .first-row .col-lg-4 > .single-skill > img{
+     width:25%;
+ }
+
+ .site-main .skills .first-row .col-lg-4 > .single-skill:hover{
+     box-shadow: var(--box-shadow);
+     transform:scale(1.5);
+ }
+
+ .site-main .skills .first-row .col-lg-4 > .single-skill:hover > img{
+     filter: brightness(1.5);
+ }
+
+ .site-main .skills .skills-title h2 > span{
+     display: block;
+     font: normal bold 49px/60px var(--ubuntu);
+     letter-spacing: 20px;
+ }
+
+ .exp-images{
+     width:40%;
+ }
+ /* End Skills */
