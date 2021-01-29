@@ -1,3 +1,106 @@
  /* Viewport <= 340px */
  @media only screen and (max-width:340px){
+     .header .main-menu .navbar,
+     .site-main .site-banner
+     {
+         padding: 4%;
+         margin:0;
+     }
+     .site-main .about,
+     .site-main .skills {
+         padding: 10%;
+         margin:0;
+     }
+     .site-main .site-banner .banner-image{
+         visibility: hidden;
+     }
+     .site-main .site-banner .site-buttons{
+         padding-right:50px;
+     }
+     .site-main .site-banner .site-title h1{
+         font-size: 38px;
+     }
+     .site-main .site-banner .site-title h4{
+         font-size: 25px;
+     }
+ }
+ /* Viewport <= 792px */
+ @media only screen and (max-width:792px){
+     .header .main-menu .navbar{
+         padding: 4%;
+         margin:0;
+     }
+     .site-main .site-banner {
+         padding: 4%;
+         margin:0;
+     }
+     .site-main .about{
+         padding: 4%;
+         margin:0;
+     }
+     .site-main .skills {
+         padding: 0 25%;
+         margin-left:0;
+     }
+     .site-main .skills .experiences{
+         padding: 0 25%;
+         margin-left:0;
+     }
+     .site-main .site-banner .banner-image{
+         margin-bottom:10rem;
+     }
+
+     .site-main .site-banner .site-buttons{
+         padding-right:50px;
+     }
+
+     .site-main .site-banner .site-title h1{
+         font-size: 45px;
+     }
+
+     .site-main .site-banner .site-title h4{
+         font-size: 30px;
+     }
+
+ }
+
+ /* Viewport <= 1910px */
+ @media only screen and (max-width:1910px){
+     .header .main-menu .navbar{
+         padding: 4%;
+         margin:0;
+     }
+     .site-main .site-banner {
+         padding: 4%;
+         margin:0;
+     }
+     .site-main .about{
+         padding: 4%;
+         margin:0;
+     }
+     .site-main .skills {
+         padding: 4%;
+         margin-left:0;
+     }
+     .site-main .skills .experiences{
+         padding: 0 1%;
+         margin-left:0;
+         width: 100%;
+     }
+
+     .site-main .site-banner .banner-image{
+         margin-bottom:10rem;
+     }
+
+     .site-main .site-banner .site-buttons{
+         padding-right:50px;
+     }
+
+     .site-main .site-banner .site-title h1{
+         font-size: 50px;
+     }
+
+     .site-main .site-banner .site-title h4{
+         font-size: 35px;
+     }
  }
