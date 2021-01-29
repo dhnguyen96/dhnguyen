@@ -181,9 +181,8 @@
      transition: box-shadow .7s ease;
  }
 
- .site-main .project-area .project:hover{
+ .site-main .project-area .project .project-info:hover{
      box-shadow: var(--box-shadow);
-     transform:scale(1.1);
  }
 
  .site-main .project-area .project .project-info h4{
