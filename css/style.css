@@ -153,9 +153,18 @@
  .site-main .project-area{
      padding:5rem 0;
  }
- .site-main .project .project-title p{
-     padding: 1rem 7rem;
+
+ .site-main .project-area .project-title p{
+     padding: 1rem 0;
+
  }
+
+ .site-main .project-area .project-title h1{
+     padding: 1rem 0;
+     font: normal bold 49px/60px var(--ubuntu);
+     letter-spacing: 20px;
+ }
+
  .site-main .project-area .project{
      background: rgba(200,250,250,.5);
      box-shadow: var(--box-shadow);

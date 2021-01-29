@@ -62,6 +62,22 @@
          font-size: 30px;
      }
 
+     .site-main .about .about-title h2 > span{
+         font-size: 20px;
+         letter-spacing: 20px;
+     }
+
+     .site-main .skills .skills-title h2 > span{
+         font-size: 20px;
+         letter-spacing: 20px;
+     }
+
+     .site-main .project-area .project-title h1{
+         padding: 1rem 3rem;
+         letter-spacing: 10px;
+         font-size: 20px;
+     }
+
  }
 
  /* Viewport <= 1910px */
