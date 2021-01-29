@@ -31,11 +31,11 @@
          margin:0;
      }
      .site-main .site-banner {
-         padding: 0 25%;
+         padding: 4%;
          margin:0;
      }
      .site-main .about{
-         padding: 25%;
+         padding: 4%;
          margin:0;
      }
      .site-main .skills {
@@ -71,15 +71,15 @@
          margin:0;
      }
      .site-main .site-banner {
-         padding: 0 25%;
+         padding: 4%;
          margin:0;
      }
      .site-main .about{
-         padding: 20%;
+         padding: 4%;
          margin:0;
      }
      .site-main .skills {
-         padding: 0 25%;
+         padding: 4%;
          margin-left:0;
      }
      .site-main .skills .experiences{
@@ -87,7 +87,7 @@
          margin-left:0;
          width: 100%;
      }
-     
+
      .site-main .site-banner .banner-image{
          margin-bottom:10rem;
      }
