@@ -93,6 +93,25 @@
          font-size: 30px;
      }
 
+     .site-main .site-banner .site-title h3::after{
+         content:"";
+         height:2px;
+         width:35vw;
+         background: var(--gradient-color);
+         display: inline-block;
+         margin-left: 5%;
+         transform: translateY(-20px);
+     }
+
+     .site-main .site-banner .site-title h4::after{
+         content:"";
+         height:2px;
+         width:75vw;
+         background: var(--gradient-color);
+         display: inline-block;
+         transform: translateY(-5px);
+     }
+
      .site-main .about .about-title h2 > span{
          font-size: 20px;
          letter-spacing: 20px;

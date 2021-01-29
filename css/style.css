@@ -197,6 +197,9 @@
      padding: 0 1.5rem;
  }
 
+ #projects > div.container.carousel.py-lg-5 > div > div.owl-dots > button.owl-dot.active > span{
+     background: var(--primary-color);
+ }
  /* End Contact */
 
  /* Footer */
