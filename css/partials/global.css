@@ -13,7 +13,6 @@
   padding: 0.8rem 2.2rem;
   font: normal 500 16px/20px var(--ubuntu);
   position: relative;
-  border: 3px solid transparent;
   border-radius: 4px;
 }
 
@@ -30,6 +29,7 @@
   background: whitesmoke;
   background-clip: padding-box;
   color: black;
+  outline:0;
 }
 
 .button.primary-button::after,
@@ -50,13 +50,14 @@
   background-clip: padding-box;
   transition: background 0.6s ease;
   margin-left: 12%;
+  box-shadow: var(--box-shadow);
 }
 
 .button.secondary-button:hover {
   background: var(--gradient-color);
   background-clip: padding-box;
   color: whitesmoke;
-  box-shadow: var(--box-shadow);
+  outline:0;
 }
 
 p.para {

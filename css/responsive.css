@@ -1,5 +1,6 @@
 /* Viewport <= 340px */
 @media only screen and (max-width: 340px) {
+
   .header .main-menu .navbar,
   .site-main .site-banner {
     padding: 4%;
@@ -28,12 +29,12 @@
     font-size: 25px;
   }
 
-  .site-main .about .about-title h2 > span {
+  .site-main .about .about-title h2>span {
     font-size: 12px;
     letter-spacing: 15px;
   }
 
-  .site-main .skills .skills-title h2 > span {
+  .site-main .skills .skills-title h2>span {
     font-size: 12px;
     letter-spacing: 15px;
   }
@@ -111,12 +112,12 @@
     transform: translateY(-5px);
   }
 
-  .site-main .about .about-title h2 > span {
+  .site-main .about .about-title h2>span {
     font-size: 20px;
     letter-spacing: 20px;
   }
 
-  .site-main .skills .skills-title h2 > span {
+  .site-main .skills .skills-title h2>span {
     font-size: 20px;
     letter-spacing: 20px;
   }
