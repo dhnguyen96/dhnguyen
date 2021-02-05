@@ -31,9 +31,19 @@ Notification.requestPermission().then(function(permission) {
     return messaging.getToken({vapidKey: "BA6plneO_Acs9ip6bWt1s1SOO3LLgZFFRXRxKruZ0KJ-bMpuY7y8CUukx1UGBLQGWB8N5cXrwjV2Yz-v-ICJIVs"});
 }).then(function (token) {
     console.log(token);
+    saveToken(token);
 }).catch(function (err) {
     console.log('Permission not granted.');
 });
+
+var tokenRefs = firebase.database().ref('tokens');
+
+function saveToken(token){
+    var newtokenRefs = tokenRefs.push();
+    newtokenRefs.set({
+        token: token
+})
+}
 
 messaging.onMessage(function(payload) {
     console.log('onMessage ', payload);
