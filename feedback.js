@@ -16,6 +16,12 @@ firebase.initializeApp(firebaseConfig);
 // Cloud messaging
 
 const messaging = firebase.messaging();
+
+navigator.serviceWorker.register('./dhnguyen/firebase-messaging-sw.js')
+.then((registration) => {
+    messaging.useServiceWorker(registration)
+});
+
 Notification.requestPermission().then(function(){
     console.log('Permission granted.');
     return messaging.getToken();
