@@ -15,55 +15,15 @@ firebase.initializeApp(firebaseConfig);
 // Cloud messaging
 const messaging = firebase.messaging();
 
-  function notifyMe() {
-  // Let's check if the browser supports notifications
-  if (!("Notification" in window)) {
-    alert("This browser does not support desktop notification");
-  }
-
-  // Let's check whether notification permissions have already been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
-  }
-
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then(function (permission) {
-      // If the user accepts, let's create a notification
-      if (permission === "granted") {
-        var notification = new Notification("Hi there!");
-      }
-    });
-  }
-
-  notifyMe();
-
-  // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them any more.
-}
-  // Add the public key generated from the console here.
-messaging.getToken({vapidKey: "BA6plneO_Acs9ip6bWt1s1SOO3LLgZFFRXRxKruZ0KJ-bMpuY7y8CUukx1UGBLQGWB8N5cXrwjV2Yz-v-ICJIVs"});
-
-  // Get registration token. Initially this makes a network call, once retrieved
-// subsequent calls to getToken will return from cache.
-messaging.getToken({ vapidKey: 'BA6plneO_Acs9ip6bWt1s1SOO3LLgZFFRXRxKruZ0KJ-bMpuY7y8CUukx1UGBLQGWB8N5cXrwjV2Yz-v-ICJIVs' }).then((currentToken) => {
-    if (currentToken) {
-      // Send the token to your server and update the UI if necessary
-      // ...
-    } else {
-      // Show permission request UI
-      console.log('No registration token available. Request permission to generate one.');
-      // ...
-    }
-  }).catch((err) => {
-    console.log('An error occurred while retrieving token. ', err);
-    // ...
-  });
-
-messaging.onMessage(function(payload){
-    console.log('Message received ', payload);
+messaging.requestPermission().then(function(){
+    console.log('Permission granted.');
+    return messaging.getToken();
+}).then(function(token){
+    console.log(token);
+}).catch(function(err){
+    console.log('Permission not granted.')
 })
+
 
 
 // Reference feedback in storage
