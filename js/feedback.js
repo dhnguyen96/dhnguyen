@@ -1,4 +1,4 @@
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyC6gwKgxn_F7jMrafd_MuGOTmRhMxvIn2Q",
     authDomain: "feedback-d5711.firebaseapp.com",
     projectId: "feedback-d5711",
@@ -12,8 +12,61 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
+
+// Cloud messaging
+
+/******** Feedback messaging 
+MsgElem = document.getElementById("msg");
+TokenElem = document.getElementById("token");
+NotisElem = document.getElementById("notis");
+ErrElem = document.getElementById("err")
+
+const messaging = firebase.messaging();
+navigator.serviceWorker.register('service-worker.js')
+.then((registration) => {
+  messaging.useServiceWorker(registration);
+});
+*********/
+
+const messaging = firebase.messaging();
+Notification.requestPermission().then(function(){
+    console.log('Permission granted.');
+    return messaging.getToken();
+}).then(function(token){
+    console.log(token);
+}).catch(function(err){
+    console.log('Permission denied.');
+})
+
+messaging.onMessage(function(payload){
+    console.log('Message received ', payload);
+})
+/*
+messaging.setBackgroundMessageHandler(function(payload) {
+    console.log(
+        "[firebase-messaging-sw.js] Received background message ",
+        payload,
+    );
+    // Customize notification here
+    const notificationTitle = "Background Message Title";
+    const notificationOptions = {
+        body: "Background Message body.",
+        icon: "/firebase-logo.png",
+    };
+
+    return self.registration.showNotification(
+        notificationTitle,
+        notificationOptions,
+    );
+});
+*/
+
 // Reference feedback in storage
 var feedbackRefs = firebase.database().ref('feedback');
+
+
+
+
 
 /******** Feedback submission *********/
 
@@ -62,19 +115,8 @@ function saveFeedback(name, company, email, phone, message) {
     });
 }
 
-/******** Feedback messaging *********/
-MsgElem = document.getElementById("msg");
-TokenElem = document.getElementById("token");
-NotisElem = document.getElementById("notis");
-ErrElem = document.getElementById("err")
 
-const messaging = firebase.messaging();
-navigator.serviceWorker.register('/dhnguyen/firebase-message-sw.js')
-.then((registration) => {
-  messaging.useServiceWorker(registration);
-});
 
-    
 /******** Feedback navbar *********/
 
 // Sticky Nav
@@ -102,4 +144,5 @@ $(function () {
         navMain.collapse("hide");
     });
 });
+
 navbarFixed();
