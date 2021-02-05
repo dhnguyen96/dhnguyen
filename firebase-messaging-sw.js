@@ -1,7 +1,3 @@
-import firebase from "firebase/app";
-import firebase from "firebase/messaging";
-import firebase from "firebase/firebase-app";
-import firebase from "firebase/firebase-messaging";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyC6gwKgxn_F7jMrafd_MuGOTmRhMxvIn2Q",
