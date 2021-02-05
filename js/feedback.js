@@ -29,7 +29,7 @@ navigator.serviceWorker.register('service-worker.js')
 *********/
 
 const messaging = firebase.messaging();
-Notification.requestPermission().then(function(){
+Notification.requestPermission().then(function(Permission){
     console.log('Permission granted.');
     return messaging.getToken();
 }).then(function(token){
