@@ -87,8 +87,19 @@ messaging
     .catch(function (err) {
         ErrElem.innerHTML = ErrElem.innerHTML + "; " + err
         console.log("Unable to get permission to notify.", err);
-    });
-
+    })
+    
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/dhnguyen/sw.js', {scope: '/dhnguyen/'})
+        .then(function(reg) {
+          // registration worked
+          console.log('Registration succeeded. Scope is ' + reg.scope);
+        }).catch(function(error) {
+          // registration failed
+          console.log('Registration failed with ' + error);
+        });
+      }
+    }
 /******** Feedback navbar *********/
 
 // Sticky Nav
