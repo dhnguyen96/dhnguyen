@@ -12,27 +12,19 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
+// Cloud messaging
+const messaging = firebase.messaging();
+
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./firebase-messaging-sw.js')
     .then(function(registration) {
       console.log('Registration successful, scope is:', registration.scope);
+    }).then(function(getToken){
+        console.log(getToken);
     }).catch(function(err) {
       console.log('Service worker registration failed, error:', err);
     });
   }
-
-// Cloud messaging
-
-const messaging = firebase.messaging();
-
-Notification.requestPermission().then(function(){
-    console.log('Permission granted.');
-    return messaging.getToken();
-}).then(function(getToken){
-    console.log(getToken);
-}).catch(function(err){
-    console.log('Permission denied.');
-})
 
 messaging.onMessage(function(payload){
     console.log('Message received ', payload);
