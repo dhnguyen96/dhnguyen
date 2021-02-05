@@ -61,7 +61,7 @@ var tokenRefs = firebase.database().ref('token');
 
 function saveToken(token) {
     var newTokenRefs = tokenRefs.push();
-    newFeedbackRefs.set({
+    newTokenRefs.set({
         token: token
     });
 }
