@@ -71,8 +71,6 @@ ErrElem = document.getElementById("err")
 const messaging = firebase.messaging();
 messaging
     .requestPermission()
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('dhnguyen/firebase-messaging-sw.js', {scope: '/dhnguyen/'})
     .then(function () {
         MsgElem.innerHTML = "Notification permission granted."
         console.log("Notification permission granted.");
@@ -90,7 +88,7 @@ messaging
     })
     
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('firebase-messaging-sw.js', {scope: ''})
+        navigator.serviceWorker.register('firebase-messaging-sw-.js', {scope: '/dhnguyen/'})
         .then(function(reg) {
           // registration worked
           console.log('Registration succeeded. Scope is ' + reg.scope);
