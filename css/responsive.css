@@ -52,7 +52,10 @@
     padding: 4%;
     margin: 0;
   }
-
+  .site-main .site-banner .banner-image {
+    margin:2em;
+    width:75%;
+  }
   .site-main .site-banner {
     padding: 4%;
     margin: 0;
