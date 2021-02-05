@@ -1,3 +1,5 @@
+importScripts('https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/8.2.6/firebase-messaging.js');
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyC6gwKgxn_F7jMrafd_MuGOTmRhMxvIn2Q",
@@ -14,25 +16,10 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const messaging = firebase.messaging();
-
-messaging.onMessage(function (payload) {
-    console.log('Message received ', payload);
-})
-
-messaging.setBackgroundMessageHandler(function (payload) {
-    console.log(
-        "[firebase-messaging-sw.js] Received background message ",
-        payload,
-    );
-    // Customize notification here
-    const notificationTitle = "Background Message Title";
-    const notificationOptions = {
-        body: "Background Message body.",
-        icon: "/firebase-logo.png",
+messaging.setBackgroundMessageHandler(function(payload){
+    const title = "Hello World";
+    const options =  {
+        body: payload.data.status
     };
-
-    return self.registration.showNotification(
-        notificationTitle,
-        notificationOptions,
-    );
+    return self.ServiceWorkerRegistration.showNotification(title, options);
 });
