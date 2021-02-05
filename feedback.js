@@ -1,6 +1,8 @@
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyC6gwKgxn_F7jMrafd_MuGOTmRhMxvIn2Q",
     authDomain: "feedback-d5711.firebaseapp.com",
+    databaseURL: "https://feedback-d5711-default-rtdb.firebaseio.com",
     projectId: "feedback-d5711",
     storageBucket: "feedback-d5711.appspot.com",
     messagingSenderId: "322472703685",
@@ -15,12 +17,12 @@ firebase.initializeApp(firebaseConfig);
 // Cloud messaging
 const messaging = firebase.messaging();
 
-messaging.requestPermission().then(function(){
+messaging.requestPermission().then(function () {
     console.log('Permission granted.');
     return messaging.getToken();
-}).then(function(token){
+}).then(function (token) {
     console.log(token);
-}).catch(function(err){
+}).catch(function (err) {
     console.log('Permission not granted.')
 })
 
