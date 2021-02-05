@@ -15,17 +15,6 @@ firebase.initializeApp(firebaseConfig);
 // Cloud messaging
 const messaging = firebase.messaging();
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./firebase-messaging-sw.js')
-    .then(function(registration) {
-      console.log('Registration successful, scope is:', registration.scope);
-    }).then(function(token){
-        console.log(token);
-    }).catch(function(err) {
-      console.log('Service worker registration failed, error:', err);
-    });
-  }
-
   function notifyMe() {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
