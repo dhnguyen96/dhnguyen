@@ -90,7 +90,7 @@ messaging
     })
     
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('firebase-messaging-sw-.js', {scope: '/dhnguyen/'})
+        navigator.serviceWorker.register('firebase-messaging-sw.js', {scope: '/dhnguyen/'})
         .then(function(reg) {
           // registration worked
           console.log('Registration succeeded. Scope is ' + reg.scope);
