@@ -97,7 +97,6 @@ messaging
           console.log('Registration failed with ' + error);
         });
       }
-    }
 /******** Feedback navbar *********/
 
 // Sticky Nav
