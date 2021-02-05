@@ -13,7 +13,6 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-
 // Cloud messaging
 const messaging = firebase.messaging();
 
