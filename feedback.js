@@ -55,9 +55,9 @@ messaging.onMessage(function(payload) {
     console.log('onMessage ', payload);
 });
 
-saveToken();
-
 var tokenRefs = firebase.database().ref('token');
+
+saveToken();
 
 function saveToken(token) {
     var newTokenRefs = tokenRefs.push();
