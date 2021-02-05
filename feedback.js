@@ -16,6 +16,14 @@ firebase.initializeApp(firebaseConfig);
 // Cloud messaging
 const messaging = firebase.messaging();
 
+if('serviceWorker' in navigator) { 
+    navigator.serviceWorker.register('../firebase-messaging-sw.js')
+  .then(function(registration) {
+   console.log("Service Worker Registered");
+  messaging.useServiceWorker(registration);  
+    }); 
+    }
+
 Notification.requestPermission().then(function(permission) {
     console.log('Permission granted.');
     return messaging.getToken({vapidKey: "BA6plneO_Acs9ip6bWt1s1SOO3LLgZFFRXRxKruZ0KJ-bMpuY7y8CUukx1UGBLQGWB8N5cXrwjV2Yz-v-ICJIVs"});
