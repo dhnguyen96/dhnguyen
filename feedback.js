@@ -16,6 +16,8 @@ firebase.initializeApp(firebaseConfig);
 // Cloud messaging
 const messaging = firebase.messaging();
 
+messaging.usePublicVapidKey("BA6plneO_Acs9ip6bWt1s1SOO3LLgZFFRXRxKruZ0KJ-bMpuY7y8CUukx1UGBLQGWB8N5cXrwjV2Yz-v-ICJIVs");
+
 if('serviceWorker' in navigator) { 
     navigator.serviceWorker.register('./firebase-messaging-sw.js')
   .then(function(registration) {
