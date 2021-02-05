@@ -69,7 +69,7 @@ NotisElem = document.getElementById("notis");
 ErrElem = document.getElementById("err")
 
 const messaging = firebase.messaging();
-navigator.serviceWorker.register('firebase-message-sw.js')
+navigator.serviceWorker.register('/dhnguyen/firebase-message-sw.js')
 .then((registration) => {
   messaging.useServiceWorker(registration);
 });
