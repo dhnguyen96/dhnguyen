@@ -11,6 +11,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+
 // Reference feedback in storage
 var feedbackRefs = firebase.database().ref('feedback');
 
@@ -70,6 +71,8 @@ ErrElem = document.getElementById("err")
 const messaging = firebase.messaging();
 messaging
     .requestPermission()
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('dhnguyen/firebase-messaging-sw.js', {scope: '/dhnguyen/'})
     .then(function () {
         MsgElem.innerHTML = "Notification permission granted."
         console.log("Notification permission granted.");
