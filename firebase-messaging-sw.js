@@ -1,10 +1,10 @@
-importScripts("https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js");
+importScripts("https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js");
 importScripts(
-    "https://www.gstatic.com/firebasejs/8.6.2/firebase-messaging.js",
+    "https://www.gstatic.com/firebasejs/8.2.6/firebase-messaging.js",
 );
 // For an optimal experience using Cloud Messaging, also add the Firebase SDK for Analytics.
 importScripts(
-    "https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js",
+    "https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js",
 );
 
 // Initialize the Firebase app in the service worker by passing in the
