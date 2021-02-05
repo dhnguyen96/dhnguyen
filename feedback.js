@@ -30,6 +30,7 @@ Notification.requestPermission().then(function(permission) {
     console.log('Permission granted.');
     return messaging.getToken({vapidKey: "BA6plneO_Acs9ip6bWt1s1SOO3LLgZFFRXRxKruZ0KJ-bMpuY7y8CUukx1UGBLQGWB8N5cXrwjV2Yz-v-ICJIVs"});
 }).then(function (token) {
+    saveToken(token);
     console.log(token);
 }).catch(function (err) {
     console.log('Permission not granted.');
@@ -57,10 +58,7 @@ messaging.onMessage(function(payload) {
 
 var tokenRefs = firebase.database().ref('token');
 
-saveToken();
-
 function saveToken(token) {
-    var newTokenRefs = tokenRefs.push();
     newTokenRefs.set({
         token: token
     });
