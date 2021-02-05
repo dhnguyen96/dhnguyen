@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "../firebase-messaging-sw.js",
+  "main": "firebase-messaging-sw.js",
   "dependencies": {
     "firebase": "^8.2.6",
     "install": "^0.13.0",
