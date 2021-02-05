@@ -10,7 +10,7 @@ const firebaseConfig = {
     measurementId: "G-JF9PQNLH5M"
 };
 
-/* Initialize Firebase
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 const messaging = firebase.messaging();
@@ -35,4 +35,4 @@ messaging.setBackgroundMessageHandler(function (payload) {
         notificationTitle,
         notificationOptions,
     );
-});*/
+});
