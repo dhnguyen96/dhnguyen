@@ -24,7 +24,7 @@ if('serviceWorker' in navigator) {
    console.log("Service Worker Registered");
   messaging.useServiceWorker(registration);  
     }); 
-    }
+}
 
 Notification.requestPermission().then(function(permission) {
     console.log('Permission granted.');
@@ -32,8 +32,8 @@ Notification.requestPermission().then(function(permission) {
 }).then(function (token) {
     console.log(token);
 }).catch(function (err) {
-    console.log('Permission not granted.')
-})
+    console.log('Permission not granted.');
+});
 
 // Get registration token. Initially this makes a network call, once retrieved
 // subsequent calls to getToken will return from cache.
@@ -49,7 +49,7 @@ messaging.getToken({ vapidKey: 'BA6plneO_Acs9ip6bWt1s1SOO3LLgZFFRXRxKruZ0KJ-bMpu
   }).catch((err) => {
     console.log('An error occurred while retrieving token. ', err);
     // ...
-  })
+  });
 
 messaging.onMessage(function(payload) {
     console.log('onMessage ', payload);
